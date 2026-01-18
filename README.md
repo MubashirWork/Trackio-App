@@ -146,24 +146,25 @@ Before running this app, make sure you have the following installed:
 ## Installation / Setup
 
 1. **Clone the repository**
-```bash
-git clone https://github.com/MubashirWork/Trackio-App.git
-```
+    ```bash
+    git clone https://github.com/MubashirWork/Trackio-App.git
+    ```
+
 2. **Open the project folder**
-```bash
-cd trackio
-```
+    ```bash
+    cd trackio
+    ```
 
 3. **Install flutter dependencies**
-```bash
-flutter pub get
-```
+    ```bash
+    flutter pub get
+    ```
 
 4. **Connect a device or start an emulator**
-- For Android: use an Android device or emulator
-- For iOS: use an iPhone device or simulator
+    - For Android: use an Android device or emulator
+    - For iOS: use an iPhone device or simulator
 
 5. **Run the app**
-```bash
-flutter run
-```
+    ```bash
+    flutter run
+    ```

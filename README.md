@@ -49,67 +49,99 @@ Users can edit their name through a dedicated screen where the updated value is 
 
 ## Technology Stack
 
-- **Flutter (Dart)
-- **Material UI
-- **Local Database (sqflite)
-- **SharedPreferences
-- **Custom SharedPrefsService
-- **Android (primary target)
+- Flutter (Dart)
+- Material UI
+- Local Database (sqflite)
+- SharedPreferences
+- Custom SharedPrefsService
+- Android (primary target)
 
 ## Tools & Libraries
 
-- **Android Studio & Vs Code 
-- **Flutter SDK
-- **SnackBar Service
-- **Navigation (named routes)
-- **Custom Widgets (Appbar, AppText, AppContainer etc.)
+- Android Studio & Vs Code 
+- Flutter SDK
+- SnackBar Service
+- Navigation (named routes)
+- Custom Widgets (Appbar, AppText, AppContainer etc.)
 
 ## Project Structure
 
 ```text
-notely/
-│
-├── android/                # Android native files.
-├── ios/                    # iOS native files.
-├── lib/                    # Main Flutter code.
-│   ├── core/               # Constants, services, database, DAO.
-│   │   ├── constants/      # Colors, strings, etc.
-│   │   ├── data/           # Database access & shared preferences.
-│   │   └── service/        # SnackBar, other services.
-│   ├── presentation/       # UI layer (screens, widgets).
-│   │   ├── screens/        # All screens like Home, Profile, EditFullName.
-│   │   └── widget/         # Reusable widgets (AppText, AppButton, BottomSheet).
-│   ├── routes/             # Route names and navigation.
-│   └── main.dart           # Entry point.
-├── assets/                 # Images, screenshots, etc.
-├── pubspec.yaml            # Flutter dependencies and assets.
-└── README.md
+trackio/
+├─ .dart_tool/
+├─ .idea/
+├─ android/
+├─ ios/
+├─ assets/
+│ └─ images/
+│ ├─ app_icon.png
+│ ├─ icon.png
+│ ├─ logo.png
+│ └─ profile_image.png
+├─ screenshots/
+├─ build/
+├─ lib/
+│ ├─ core/
+│ │ ├─ constants/ (app_colors.dart, app_strings.dart)
+│ │ ├─ data/
+│ │ │ ├─ database/
+│ │ │ │ ├─ Dao/
+│ │ │ │ │ ├─ logs/ (logs_dao.dart)
+│ │ │ │ │ └─ user/ (user_dao.dart)
+│ │ │ │ ├─ constants/ (logs.dart)
+│ │ │ │ ├─ helper/ (database_helper.dart)
+│ │ │ │ └─ model/
+│ │ │ │ ├─ logs/ (logs_table.dart)
+│ │ │ │ └─ user/ (user_table.dart)
+│ │ │ ├─ service/ (snack_bar_service.dart)
+│ │ │ └─ shared_preference/service/ (shared_prefs_service.dart)
+│ ├─ routes/ (route_names.dart, app_routes.dart)
+│ ├─ ui/
+│ │ ├─ screens/
+│ │ │ ├─ auth/ (login, sign_up, forgot_password)
+│ │ │ ├─ dashboard/ (dashboard_screen.dart)
+│ │ │ ├─ edit_name/ (edit_name_screen.dart)
+│ │ │ ├─ logs/ (logs_history_screen.dart)
+│ │ │ ├─ profile/ (profile_screen.dart, model/items.dart)
+│ │ │ └─ splash/ (splash_screen.dart)
+│ │ └─ widgets/ (app_bar.dart, app_container.dart, app_drawer.dart, app_text.dart, app_text_button.dart, app_text_field.dart, app_elevated_button.dart, loading_indicator.dart)
+│ └─ main.dart
+├─ test/
+├─ .flutter-plugins-dependencies
+├─ .gitignore
+├─ .metadata
+├─ analysis_options.yaml
+├─ devtools_options.yaml
+├─ pubspec.lock
+├─ pubspec.yaml
+├─ README.md
+└─ trackio.iml
 ```
 
 ## What I Learned
 
-- **Flutter Development
-- **Dart Programming
-- **State Management with Stateful Widgets
-- **Local Database Integration (SQLite with DAO)
-- **Shared Preferences & Session Handling
-- **Authentication Flow (Login, Logout, Password Reset)
-- **Navigation with Named Routes
-- **Custom Reusable Widgets
-- **Profile & Form Handling
-- **SnackBar & User Feedback
-- **UI/UX Design & Layout
+- Flutter Development
+- Dart Programming
+- State Management with Stateful Widgets
+- Local Database Integration (SQLite with DAO)
+- Shared Preferences & Session Handling
+- Authentication Flow (Login, Logout, Password Reset)
+- Navigation with Named Routes
+- Custom Reusable Widgets
+- Profile & Form Handling
+- SnackBar & User Feedback
+- UI/UX Design & Layout
 
 ## Prerequisites
 
 Before running this app, make sure you have the following installed:
 
-- **Flutter SDK
-- **Dart SDK
-- **Android Studio or VS Code with Flutter & Dart plugins
-- **Xcode** (if running on iOS)
-- **A connected device or emulator (Android or iOS)
-- **Git (for cloning the repository)
+- Flutter SDK
+- Dart SDK
+- Android Studio or VS Code with Flutter & Dart plugins
+- Xcode (if running on iOS)
+- A connected device or emulator (Android or iOS)
+- Git (for cloning the repository)
 
 ## Installation / Setup
 
@@ -128,11 +160,10 @@ flutter pub get
 ```
 
 4. **Connect a device or start an emulator**
-- **For Android: use an Android device or emulator
-- **For iOS: use an iPhone device or simulator
+- For Android: use an Android device or emulator
+- For iOS: use an iPhone device or simulator
 
 5. **Run the app**
 ```bash
 flutter run
 ```
-

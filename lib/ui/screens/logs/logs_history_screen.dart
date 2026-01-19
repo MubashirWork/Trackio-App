@@ -117,12 +117,10 @@ class _LogsHistoryScreenState extends State<LogsHistoryScreen> {
                   padding: 8,
                   containerColor: AppColors.grayish,
                   borderColor: AppColors.grayish,
-                  child: Expanded(
-                    child: AppText(
-                      data: myList.isNotEmpty
-                          ? 'Last Check In at: ${myList.last[Logs.date]}, Time: ${myList.last[Logs.checkIn]}'
-                          : 'No check in record',
-                    ),
+                  child: AppText(
+                    data: myList.isNotEmpty
+                        ? 'Last Check In at: ${myList.last[Logs.date]}, Time: ${myList.last[Logs.checkIn]}'
+                        : 'No check in record',
                   ),
                 ),
                 const SizedBox(height: 16),

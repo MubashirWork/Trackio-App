@@ -121,7 +121,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       // Bottom navigation for login
       bottomNavigationBar: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: 16, right: 16, bottom: 16),
+          padding: EdgeInsets.all(16),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -155,7 +155,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               child: IntrinsicHeight(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
 
                     // App logo and name title
